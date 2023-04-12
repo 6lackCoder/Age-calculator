@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Age Calculator</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <div>
-            <p>Date</p>
-            <input type="text" id="date" placeholder="date"  minlength="1" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
-        </div>
+    <div class="container">
 
-        <div>
-            <p>Month</p>
-            <input type="text" id="month" placeholder="month" minlength="1" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
-        </div>
+            <div class="text">
+                <h2>Age Calculator</h2>
+            </div>
 
-        <div>
-            <p>Year</p>
-            <input type="text" id="year" placeholder="year" minlength="4" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
-        </div>
+            <div class="input_box">
+                <div class="input">
+                    <label for="date">Date</label>
+                    <input type="text" id="date" placeholder="dd" minlenght="1" maxlength="2" required>
+                </div>
 
-        <button type="submit" onclick="age()">Check Age</button>
+                <div class="input">
+                    <label for="date">Month</label>
+                    <input type="text" id="month" placeholder="mm" minlenght="1" maxlength="2" required>
+                </div>
+
+                <div class="input">
+                    <label for="date">Year</label>
+                    <input type="text" id="year" placeholder="yyyy" minlenght="1" maxlength="4" required>
+                </div>
+            </div>
+
+            <div class="submit">
+                <input type="submit" name="submit" value="Calculate" onclick="age()">
+            </div>
+
+
+            <div class="yourAge" id="yourAge">
+
+            </div>
+
+
+
+
+
     </div>
-
-    <p id="age"></p>
+    <script src="./index.js"></script>
 </body>
-<script src="./js/index.js"></script>
+
 </html>
